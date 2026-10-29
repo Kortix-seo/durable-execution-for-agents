@@ -1,0 +1,13 @@
+{
+  "name": "durable-function-on-postgres",
+  "private": true,
+  "type": "module",
+  "description": "A durable function whose journal is a Postgres table: each step's effect commits in the same transaction as its checkpoint.",
+  "scripts": {
+    "start": "node run.mjs --job demo-1",
+    "test": "./test.sh"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}
