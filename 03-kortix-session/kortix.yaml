@@ -1,0 +1,26 @@
+# Excerpt of the project manifest behind this example. The interesting part is
+# not the agent — it is that the work lands as commits on a session branch and
+# a change request, which is what survives when the sandbox does not.
+name: refund-ops
+description: An open-source AI Operating System project: a support agent that files refunds and opens a change request for a person to merge.
+
+agents:
+  - name: refund-triage
+    description: Triages a support ticket, files a refund, and writes the change request.
+    model: any
+    prompt: |
+      Read the ticket attached to this session. Classify it. If it is a refund,
+      file it through the refunds connector. Write what you did into
+      ops/refunds.md and commit it. Never merge: commit, push your session
+      branch, and open a change request.
+
+triggers:
+  - name: nightly-refund-sweep
+    type: cron
+    cron: "0 3 * * *"
+    timezone: UTC
+    prompt: Sweep last night's refund tickets and open one change request with the summary.
+
+  - name: refund-requested
+    type: webhook
+    prompt: A refund was requested in the helpdesk. Verify it and file it.
