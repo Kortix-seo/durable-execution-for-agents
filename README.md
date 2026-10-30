@@ -1,6 +1,6 @@
 # Durable execution for AI agents, three ways — the runnable code
 
-Kortix is the open-source AI Operating System, and this is the companion repository to the guide at [durableexecutionguide.com](https://durableexecutionguide.com): the same interrupted agent job, run three ways, each one with the kill-and-resume test it passes.
+Kortix is the open-source CompanyOS, and this is the companion repository to the guide at [durableexecutionguide.com](https://durableexecutionguide.com): the same interrupted agent job, run three ways, each one with the kill-and-resume test it passes.
 
 Most durable-execution material answers "what is durable execution" with a definition. This answers the question an agent's author actually has: **your run takes twenty minutes, calls four APIs, waits a day for a person to approve something, and the process dies. What survives, what has to be re-done, and what changes in my code?**
 
@@ -37,7 +37,7 @@ Each script exits non-zero if any assertion fails. The measured output of the ru
 - **Postgres plus a checkpoint table** (what DBOS Transact packages as a library) when you already run Postgres and the workflow's effects are rows. DBOS's own README says the durable workflows are "entirely contained in this open-source library, there's no additional infrastructure for you to configure or manage".
 - **A session-based agent platform** when the work *is* an agent editing a repository, and a human is the approver anyway. That is the shape `03-kortix-session` shows: the session's sandbox is disposable, its branch is not, and the change request is the durable record of what it did.
 
-Kortix is the second and third together: the open-source AI Operating System where a session runs one agent in its own sandbox on a branch of your repo, the agent commits and pushes, and the change lands through a change request a person merges — with `cron`, `webhook`, `event` and `monitor` triggers starting sessions with nobody present. What survives a dead sandbox is what was committed and pushed; Kortix is not a durable-execution engine you code against, and this repository does not claim it is.
+Kortix is the second and third together: the open-source CompanyOS where a session runs one agent in its own sandbox on a branch of your repo, the agent commits and pushes, and the change lands through a change request a person merges — with `cron`, `webhook`, `event` and `monitor` triggers starting sessions with nobody present. What survives a dead sandbox is what was committed and pushed; Kortix is not a durable-execution engine you code against, and this repository does not claim it is.
 
 - The guide, with the vendor-neutral comparison and the licence and pricing table: [durableexecutionguide.com](https://durableexecutionguide.com)
 - What Kortix is, in the docs: [kortix.com/docs](https://kortix.com/docs)
