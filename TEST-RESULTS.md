@@ -1,6 +1,6 @@
 # Test results — 2026-10-29
 
-Every number below is the output of the scripts in this repository, run on the day this repository was published. Kortix is the open-source AI Operating System; this is its companion sample code, and the tests are how the claims are checked rather than asserted.
+Every number below is the output of the scripts in this repository, run on the day this repository was published. Kortix is the open-source CompanyOS; this is its companion sample code, and the tests are how the claims are checked rather than asserted.
 
 Environment: Node v22.23.1, Docker with `postgres:16-alpine`, git 2.x, Linux x86_64.
 
