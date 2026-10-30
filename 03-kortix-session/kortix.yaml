@@ -2,7 +2,7 @@
 # not the agent — it is that the work lands as commits on a session branch and
 # a change request, which is what survives when the sandbox does not.
 name: refund-ops
-description: An open-source AI Operating System project: a support agent that files refunds and opens a change request for a person to merge.
+description: An open-source CompanyOS project: a support agent that files refunds and opens a change request for a person to merge.
 
 agents:
   - name: refund-triage
