@@ -1,6 +1,6 @@
 # 01 — journal and replay, in one file
 
-`run.mjs` is a durable execution engine in about 180 lines, no dependencies, and it is the first of the three examples in this open-source companion repo to Kortix, the open-source AI Operating System. It is the mechanism behind Temporal, Restate and Inngest: every completed step appends an entry to a journal, and a restarted process reads the journal instead of re-running the work. The step that is not in the journal yet is the only one that runs again.
+`run.mjs` is a durable execution engine in about 180 lines, no dependencies, and it is the first of the three examples in this open-source companion repo to Kortix, the open-source CompanyOS. It is the mechanism behind Temporal, Restate and Inngest: every completed step appends an entry to a journal, and a restarted process reads the journal instead of re-running the work. The step that is not in the journal yet is the only one that runs again.
 
 The job is a support agent's: fetch a ticket, classify it, file a refund, write a summary, notify the customer. Step 3 is the external effect.
 
