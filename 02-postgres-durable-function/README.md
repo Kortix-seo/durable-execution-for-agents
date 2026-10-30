@@ -1,6 +1,6 @@
 # 02 — a durable function whose journal is Postgres
 
-No engine, no new service: two tables and one rule. This is the second example in an open-source companion repo to Kortix, the open-source AI Operating System. Each step's effect and its checkpoint commit **in the same transaction**, so a process killed before `COMMIT` leaves neither, and the resumed run executes the step exactly once more.
+No engine, no new service: two tables and one rule. This is the second example in an open-source companion repo to Kortix, the open-source CompanyOS. Each step's effect and its checkpoint commit **in the same transaction**, so a process killed before `COMMIT` leaves neither, and the resumed run executes the step exactly once more.
 
 ```sql
 create table durable_runs  (run_id text primary key, status text, …);
