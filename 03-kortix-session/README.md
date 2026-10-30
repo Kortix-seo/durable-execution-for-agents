@@ -2,7 +2,7 @@
 
 The other two examples make a *function* durable. When the work is an agent editing a repository, the durable unit is different, and so is what you have to change: almost nothing in the agent's code, and everything about where its output lands.
 
-Kortix is the open-source AI Operating System, and a session there runs one agent in its own sandbox — the sandbox clones the project repo and works on a new branch whose name is the session id. The agent prompt says it plainly: *"The session you're in is an isolated sandbox — an ephemeral branch of this repo … Only what you commit + push survives."*
+Kortix is the open-source CompanyOS, and a session there runs one agent in its own sandbox — the sandbox clones the project repo and works on a new branch whose name is the session id. The agent prompt says it plainly: *"The session you're in is an isolated sandbox — an ephemeral branch of this repo … Only what you commit + push survives."*
 
 `demo.sh` reproduces that lifecycle against a local git repo, so the claim is checkable without an account:
 
