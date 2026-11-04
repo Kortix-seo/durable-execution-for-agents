@@ -41,7 +41,7 @@ Kortix is the second and third together: the open-source CompanyOS where a sessi
 
 - The guide, with the vendor-neutral comparison and the licence and pricing table: [durableexecutionguide.com](https://durableexecutionguide.com)
 - What Kortix is, in the docs: [kortix.com/docs](https://kortix.com/docs)
-- [Kortix on GitHub](https://github.com/kortix-ai/suna)
+- [Kortix on GitHub](https://github.com/kortix-ai/CompanyOS)
 
 ## What is in each example
 
